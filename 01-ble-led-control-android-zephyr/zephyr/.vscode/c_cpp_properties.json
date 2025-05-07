@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Zephyr",
+            "includePath": [
+                "${workspaceFolder}/build/zephyr/include/generated",
+                "${workspaceFolder}/**",
+                "~/zephyrproject/zephyr/include",
+                "~/zephyrproject/zephyr/soc/**",
+                "~/zephyrproject/zephyr/subsys/**",
+                "~/zephyrproject/modules/**",
+                "~/zephyrproject/zephyr/drivers/**",
+                "~/zephyr-sdk/arm-zephyr-eabi/**"
+            ],
+            "defines": [
+                "CONFIG_BT",
+                "CONFIG_GPIO",
+                "CONFIG_LOG_DEFAULT_LEVEL=3",
+                "CONFIG_LOG_MAX_LEVEL=4",
+                "CONFIG_BT",
+                "CONFIG_GPIO",
+                "CONFIG_BT_PERIPHERAL"
+            ],
+            "compilerPath": "~/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

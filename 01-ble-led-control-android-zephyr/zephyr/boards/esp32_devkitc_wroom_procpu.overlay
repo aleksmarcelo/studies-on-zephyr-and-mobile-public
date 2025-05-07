@@ -1,0 +1,27 @@
+/ {
+    leds {
+        compatible = "gpio-leds";
+        led_0: led_0 {
+            gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+            label = "User LED";
+        };
+    };
+    buttons {
+        compatible = "gpio-keys";
+        user_btn: user_btn {
+            gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+            label = "User Button";
+        };
+
+        en_button: en_button {
+            status = "disabled";
+            label = "EN Button (Reset, not GPIO)";
+        };
+    };
+
+    aliases {
+        led0 = &led_0;
+        sw0 = &user_btn;
+        enbtn = &en_button;
+    };
+};
